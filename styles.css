@@ -1,0 +1,176 @@
+/* IMPORTED FONTS  */
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+/* GLOBAL STYLES */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --light-grey:hsl(217, 12%, 63%);
+    --grey:hsl(216, 12%, 54%);
+    --blue:hsl(213, 19%, 18%);
+    --dark-blue: hsl(216, 12%, 8%);
+    --bg: linear-gradient( to bottom, hsl(212, 18%, 14%), hsl(220, 16%, 11%))
+}
+
+body{
+    font-size: 15px;
+    background: var(--dark-blue);
+    width: 100%;
+    font-family: 'Overpass', sans-serif;
+}
+/* RATING CARD */
+.rating-card{
+    display: flex;
+    flex-direction: column;
+    background: var(--bg);
+    color: var(--white);
+    width: 80%;
+    border-radius: 1rem;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 2rem;
+    height: 25rem;
+    margin-top: 10rem;
+}
+/* STAR CONTAINER */
+.star-container{
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--dark-blue);
+}
+/* STAR */
+img{
+    width: 24px;
+    height: 24px;
+}
+/* RATING CARD CONTENT */
+.rating-card-content{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+/* CARD TITLE */
+.rating-card-content h1{
+    margin: 1rem 0;
+}
+/* CARD DESCRIPTION */
+.rating-card-content p{
+    font-weight: 500;
+    word-spacing: 1px;
+    font-size: 1rem;
+    color: var(--light-grey);
+}
+/* RATING BUTTON GROUP */
+.rating-group{
+    display: flex;
+    gap:18px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+
+}
+/* RATING BUTTON */
+.rating-btn{
+    color: var(--light-grey);
+    width: 50px;
+    height: 50px;
+    font-weight: 500;
+    border-radius: 50%;
+    border: 0px;
+    background: var(--dark-blue);
+}
+.rating-btn:hover{
+    background: var(--orange);
+    cursor: pointer;
+    color: var(--white);
+}
+.selected{
+    background: var(--light-grey);
+    color: var(--white);
+}
+/* SUBMIT BUTTON */
+.rating-submit{
+    background: var(--orange);
+    color: var(--white);
+    width: 100%;
+    border-radius: 2rem;
+    margin: 0 auto;
+    border: none;
+    padding: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.rating-submit:hover{
+    background: var(--white);
+    color: var(--orange);
+    cursor: pointer;
+}
+/* THANK YOU CARD CONTAINER */
+.thank-you-card{
+    background: var(--bg);
+    border-radius: 18px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    margin: 0 auto;
+    margin-top: 10rem;
+    height: 25rem;
+}
+/* THANK YOU CARD HERO IMAGE */
+.thank-you-hero{
+    margin-bottom: 1.75rem;
+}
+/* THANK YOU CARD SELECTION */
+.thank-you-selection{
+    color: var(--orange);
+    background: hsla(213, 19%, 28%, 0.6);
+    border: none;
+    border-radius: 50px;
+    width: 55%;
+    padding: 0.3rem;
+    text-align: center;
+}
+.thank-you-title{
+    color: var(--white);
+    margin-top: 1.5rem;
+}
+.thank-you-description{
+    color: var(--light-grey);
+    margin-top: 1rem;
+    text-align: center;
+    word-spacing: 1px;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+.hidden{
+    display: none;
+}
+
+@media screen and (min-width: 767px) {
+    .rating-card{
+        width: 30%;
+    }
+    .rating-group{
+        gap: 28px;
+    }
+    .thank-you-card{
+        width: 30%;
+        padding: 1rem;
+    }
+}
